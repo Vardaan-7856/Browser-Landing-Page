@@ -6,8 +6,25 @@ taskInput.addEventListener('keydown', function(event))
 {
     //check if user pressed enter
     if(event.key === 'Enter')
+    {
         const taskValue = taskInput.value;
 
         //prevent empty tasks
+        if(taskValue === "")
+            return;
+
+        const newListItem = document.createElement('li');
+        newListItem.textContent = taskValue;
+
+        if(event.shiftKey) 
+        {
+            toDoImp.appendChild(newListItem)
+        }
+        else
+        {
+            toDo.appendChild(newListItem);
+        }
+        taskInput.value = "";
+    }
         
 }
