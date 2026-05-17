@@ -1,30 +1,45 @@
-const taskInput = document.getElementById('taskInput')
-const toDo = document.getElementById('toDo__list')
-const toDoImp = document.getElementById('toDo_imp__list')
+//Variables
+//To store the element's as objects * 3
+const inputEL = document.getElementById('taskInput')
+const list = document.getElementById('toDo__list')
+const listIMP = document.getElementById('toDo_imp__list')
 
-taskInput.addEventListener('keydown', function(event)
-{
-    //check if user pressed enter
+//create function to populate both lists
+inputEL.addEventListener('keydown',(event) =>{
     if(event.key === 'Enter')
     {
-        const taskValue = taskInput.value;
 
-        //prevent empty tasks
-        if(taskValue === "")
+        const inputELValue = inputEL.value;
+    
+        //need to check if value is blank
+        if(inputELValue === "")
             return;
-
-        const newListItem = document.createElement('li');
-        newListItem.textContent = taskValue;
-
-        if(event.shiftKey) 
-        {
-            toDoImp.appendChild(newListItem)
-        }
+        //return empty if so to prematurely leave
+    
+        const updateList = document.createElement('li');
+        updateList.textContent = inputELValue;
+    
+        if(event.shiftKey)
+            listIMP.appendChild(updateList);
         else
-        {
-            toDo.appendChild(newListItem);
-        }
-        taskInput.value = "";
+            list.appendChild(updateList);
+    
+        inputEL.value = '';
     }
-        
+    });
+
+
+
+    
+
+//Clear populated list on button action
+const clearToDoBTN = document.getElementById('clearToDoBTN');
+const clearToDoIMPBTN = document.getElementById('clearToDoIMPBTN');
+
+clearToDoBTN.addEventListener('click', (deleteList) =>{
+
+    list.innerHTML = "";
+});
+clearToDoIMPBTN.addEventListener('click', (deleteIMPlist) =>{
+    listIMP.innerHTML = "";
 });

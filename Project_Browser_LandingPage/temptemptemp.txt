@@ -1,0 +1,32 @@
+//This is where i experiment, safely copied the main code here to avoid mixing. Learning is fun!
+
+---------------------------------------------------------------------------------------------------------
+const taskInput = document.getElementById('taskInput')
+const toDo = document.getElementById('toDo__list')
+const toDoImp = document.getElementById('toDo_imp__list')
+
+taskInput.addEventListener('keydown', function(event){
+    //check if user pressed enter
+    if(event.key === 'Enter')
+    {
+        const taskValue = taskInput.value;
+
+        //prevent empty tasks
+        if(taskValue === "")
+            return;
+
+        const newListItem = document.createElement('li');
+        newListItem.textContent = taskValue;
+
+        if(event.shiftKey) 
+        {
+            toDoImp.appendChild(newListItem)
+        }
+        else
+        {
+            toDo.appendChild(newListItem);
+        }
+        taskInput.value = "";
+    }
+        
+});

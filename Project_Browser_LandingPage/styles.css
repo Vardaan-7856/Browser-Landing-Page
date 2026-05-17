@@ -13,10 +13,18 @@ body
     color: var(--text-color-primary);
     font-family: var(--font-body);
 }
+a
+{
+    color: black;
+    text-decoration: dotted;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
 ul 
 {
     list-style-type:none;
     text-align: center;
+
 }
 .header
 {
