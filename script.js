@@ -1,3 +1,8 @@
+//Focus on searchbar
+window.onload = function() {
+    document.getElementById('search-input').focus();
+};
+
 //Variables
 //To store the element's as objects * 3
 const inputEL = document.getElementById('taskInput')
@@ -75,3 +80,4 @@ clearToDoIMPBTN.addEventListener('click', () => {
     listDataIMP = []; // Clear array
     localStorage.removeItem('savedListIMPData'); // Clear storage vault
 });
+
