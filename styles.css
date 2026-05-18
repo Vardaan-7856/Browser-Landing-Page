@@ -9,7 +9,7 @@ html
 }
 body
 {
-    background-image: url('background.jpg'); 
+    background-color:rgb(74, 74, 74); 
     color: var(--text-color-primary);
     font-family: var(--font-body);
 }
@@ -64,12 +64,12 @@ li
     border-width: 1px;
     margin: 10px;
     padding: 5px;
-    background-color: rgba(128, 128, 128, 0.479);
+    background-color: rgba(128, 128, 128, 0.774);
     height: 50%;
 }
 .toDo,.toDo_imp
 {
-    background-color: rgba(255, 0, 0, 0.254);
+    background-color: rgba(255, 0, 0, 0.334);
     border-style:dashed;
     border-color: red;
     border-radius: 5px;
