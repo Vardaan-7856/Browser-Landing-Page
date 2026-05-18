@@ -9,7 +9,7 @@ html
 }
 body
 {
-    background-color:rgb(74, 74, 74); 
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
     color: var(--text-color-primary);
     font-family: var(--font-body);
 }
@@ -29,6 +29,11 @@ ul
 li
 {
     color: black;
+}
+.header__welcomeMessage
+{
+    font-family: Helvetica;
+    font-size: larger;
 }
 .header
 {
@@ -64,7 +69,7 @@ li
     border-width: 1px;
     margin: 10px;
     padding: 5px;
-    background-color: rgba(128, 128, 128, 0.774);
+    background-color: rgba(128, 128, 128, 0.328);
     height: 50%;
 }
 .toDo,.toDo_imp

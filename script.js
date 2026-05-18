@@ -1,7 +1,10 @@
 //Focus on searchbar
-window.onload = function() {
-    document.getElementById('search-input').focus();
-};
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const searchInput = document.getElementById('search-input');
+        searchInput.focus();
+    }, 50); 
+});
 
 //Variables
 //To store the element's as objects * 3
